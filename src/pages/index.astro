@@ -1,6 +1,7 @@
 ---
 import Start from '../layouts/Start.astro';
 import "../styles/global.css";
+import whatsapp_icon from "../assets/whatsapp.png";
 ---
 
 <Start>
@@ -69,7 +70,7 @@ import "../styles/global.css";
 				class="rounded-full bg-teal-600 px-5 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-teal-700 dark:hover:bg-teal-700"
 				href="https://api.whatsapp.com/send/?phone=34613943413&text&type=phone_number&app_absent=0"
 				>
-				<img src="http://localhost:4321/src/assets/whatsapp.png" class="h-6 w-auto" />
+				<img src={whatsapp_icon.src} class="h-6 w-auto" />
 				</a>
 
 			  </div>
