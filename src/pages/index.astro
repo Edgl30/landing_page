@@ -17,7 +17,12 @@ import whatsapp_icon from "../assets/whatsapp.png";
 import hechizos_img from "../assets/secctions/hechizos.jpg"
 import lectura_img from "../assets/about/lecturatabaco.jpeg"
 
+import family_img from "../assets/slider_buttom/family.jpg"
+import hands_img from "../assets/slider_buttom/hands.jpg"
+import pasion_img from "../assets/slider_buttom/pasion.jpg"
 
+import pedestal_img from "../assets/contact/pedestal.jpeg"
+import pedestal_img2 from "../assets/contact/pedestal2.jpeg"
 ---
 
 <Start>
@@ -83,32 +88,76 @@ import lectura_img from "../assets/about/lecturatabaco.jpeg"
 			<div class="flex items-center gap-4">
 	  
 			  <div class="block md:hidden">
-				<button
-				  class="rounded-sm bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75 dark:bg-gray-800 dark:text-white dark:hover:text-white/75"
-				>
-				  <svg
-					xmlns="http://www.w3.org/2000/svg"
-					class="size-5"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke="currentColor"
-					stroke-width="2"
-				  >
-					<path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-				  </svg>
-				</button>
+
+
+
+				<div class="relative">
+					<!-- Botón con funcionalidad de abrir/cerrar el menú -->
+					<button id="menuButton" class="rounded-sm bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75 dark:bg-gray-800 dark:text-white dark:hover:text-white/75">
+					  <svg xmlns="http://www.w3.org/2000/svg" class="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+					  </svg>
+					</button>
+				  
+					<!-- Menú desplegable -->
+					<div id="dropdownMenu" class="hidden absolute left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4">
+					  <div class="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-black text-sm/6 ring-1 shadow-lg ring-gray-900/5">
+						<div class="p-4">
+						  <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-rose-500">
+							<div>
+							  <a href="#" class="font-semibold text-gray-500">
+								Inicio
+								<span class="absolute inset-0"></span>
+							  </a>
+							</div>
+						  </div>
+				  
+						  <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-300">
+							<div>
+							  <a href="#" class="font-semibold text-gray-500">
+								Nosotros
+								<span class="absolute inset-0"></span>
+							  </a>
+							</div>
+						  </div>
+						  <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-300">
+							<div>
+							  <a href="#" class="font-semibold text-gray-500">
+								Servicios
+								<span class="absolute inset-0"></span>
+							  </a>
+							</div>
+						  </div>
+						  <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-300">
+							<div>
+							  <a href="#" class="font-semibold text-gray-500">
+								Contáctenos
+								<span class="absolute inset-0"></span>
+							  </a>
+							</div>
+						  </div>
+						</div>
+					  </div>
+					</div>
+				</div>
+				  
+				  
+
+
+
 			  </div>
 			</div>
 		  </div>
 		</div>
 	</header>
+  
 
 	<section class="sm:flex sm:gap-4 fixed bottom-4 right-4 z-50">
 		<a
-		  class="rounded-full bg-teal-600 px-5 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-teal-700 dark:hover:transparent"
-		  href="https://api.whatsapp.com/send/?phone=34613943413&text&type=phone_number&app_absent=0"
-		>
-		  <img src={whatsapp_icon.src} class="h-6 w-auto" />
+			class="rounded-full bg-teal-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-teal-700 dark:hover:transparent"
+			href="https://api.whatsapp.com/send/?phone=34613943413&text&type=phone_number&app_absent=0"
+			>
+			<img src={whatsapp_icon.src} class="h-8 w-auto" />
 		</a>
 	</section>
 	  
@@ -125,7 +174,6 @@ import lectura_img from "../assets/about/lecturatabaco.jpeg"
 		<div class="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
 			<h1 class="text-3xl font-extrabold text-white sm:text-5xl">
 			
-
 			<strong class="block font-extrabold text-rose-500"> Prosperidad y union. </strong>
 			</h1>
 
@@ -135,7 +183,6 @@ import lectura_img from "../assets/about/lecturatabaco.jpeg"
 
 			<div class="mt-8 flex flex-wrap gap-4 text-center">
 			
-
 			<a
 				href="https://api.whatsapp.com/send/?phone=34613943413&text&type=phone_number&app_absent=0"
 				class="block w-full rounded-sm bg-gray-300 px-12 py-3 text-sm font-medium text-rose-600 shadow-sm hover:bg-gray-400 hover:text-rose-700 focus:ring-3 focus:outline-hidden sm:w-auto"
@@ -157,7 +204,7 @@ import lectura_img from "../assets/about/lecturatabaco.jpeg"
 
 		  	</div>
 		  
-		  <div class="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
+		<div class="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
 
 			<div class="relative lg:row-span-2 transition-all duration-300 transform hover:scale-105">
 				<div class="absolute inset-px rounded-lg bg-gray-900 lg:rounded-l-[2rem]"></div>
@@ -167,9 +214,9 @@ import lectura_img from "../assets/about/lecturatabaco.jpeg"
 				  </div>
 				  <div class="@container relative min-h-[30rem] w-full grow max-lg:mx-auto max-lg:max-w-sm">
 					<div class="absolute inset-x-10 top-10 bottom-5 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 shadow-2xl">
-					  <div class="absolute inset-0 bg-gray-900/75 z-10"></div> <!-- Capa semitransparente -->
+					  <div class="absolute inset-0 bg-gray-900/75 z-10"></div>
 					  <img class="size-full object-cover object-top w-full h-full" src={hechizos_img.src} alt="">
-					  <!-- Botón en la parte inferior de la imagen -->
+			
 					  <div class="absolute bottom-0 w-full flex justify-center mb-6 z-20">
 						<a href="https://api.whatsapp.com/send/?phone=34613943413&text&type=phone_number&app_absent=0" class="group inline-block rounded-full bg-transparent border-2 border-rose-500 p-[2px] hover:border-pink-500 hover:bg-pink-500 hover:text-gray-300 focus:ring-3 focus:outline-hidden text-rose-500 transition" href="#">
 						  <span class="block rounded-full bg-transparent px-8 py-3 text-sm font-medium group-hover:bg-transparent">
@@ -183,14 +230,6 @@ import lectura_img from "../assets/about/lecturatabaco.jpeg"
 				<div class="pointer-events-none absolute inset-px rounded-lg ring-1 shadow-sm ring-black/5 lg:rounded-l-[2rem]"></div>
 			</div>
 			  
-			  
-			  
-			  
-			  
-			  
-			  
-			  
-
 			<div class="relative lg:row-span-2 transition-all duration-300 transform hover:scale-105">
 				<div class="absolute inset-px rounded-lg bg-gray border border-teal-600 max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]"></div>
 				<div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]">
@@ -199,9 +238,9 @@ import lectura_img from "../assets/about/lecturatabaco.jpeg"
 				  </div>
 				  <div class="@container relative min-h-[30rem] w-full grow max-lg:mx-auto max-lg:max-w-sm">
 					<div class="absolute inset-x-10 top-10 bottom-5 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl">
-					  <div class="absolute inset-0 bg-gray-900/75 z-10"></div> <!-- Capa semitransparente -->
+					  <div class="absolute inset-0 bg-gray-900/75 z-10"></div> 
 					  <img class="size-full object-cover object-top w-full h-full" src={tabaco_img.src} alt="">
-					  <!-- Botón en la parte inferior de la imagen -->
+					
 					  <div class="absolute bottom-0 w-full flex justify-center mb-6 z-20">
 						<a href="https://api.whatsapp.com/send/?phone=34613943413&text&type=phone_number&app_absent=0" class="group inline-block rounded-full bg-transparent border-2 border-teal-600 p-[2px] hover:border-teal-500 hover:bg-teal-500 hover:text-gray-300 focus:ring-3 focus:outline-hidden text-teal-600 transition" href="#">
 						  <span class="block rounded-full bg-transparent px-8 py-3 text-sm font-medium group-hover:bg-transparent">
@@ -215,10 +254,6 @@ import lectura_img from "../assets/about/lecturatabaco.jpeg"
 				<div class="pointer-events-none absolute inset-px rounded-lg ring-1 shadow-sm ring-black/5 max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]"></div>
 			</div>
 			  
-			  
-			  
-			  
-
 			<div class="relative lg:row-span-2 transition-all duration-300 transform hover:scale-105">
 				<div class="absolute inset-px rounded-lg bg-gray-900 lg:rounded-l-[2rem]"></div>
 				<div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
@@ -227,9 +262,9 @@ import lectura_img from "../assets/about/lecturatabaco.jpeg"
 				  </div>
 				  <div class="@container relative min-h-[30rem] w-full grow max-lg:mx-auto max-lg:max-w-sm">
 					<div class="absolute inset-x-10 top-10 bottom-5 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl">
-					  <div class="absolute inset-0 bg-gray-900/75 z-10"></div> <!-- Capa semitransparente -->
+					  <div class="absolute inset-0 bg-gray-900/75 z-10"></div> 
 					  <img class="size-full object-cover object-top w-full h-full" src={love_img.src} alt="">
-					  <!-- Botón en la parte inferior de la imagen -->
+					  
 					  <div class="absolute bottom-0 w-full flex justify-center mb-6 z-20">
 						<a href="https://api.whatsapp.com/send/?phone=34613943413&text&type=phone_number&app_absent=0" class="group inline-block rounded-full bg-transparent border-2 border-rose-500 p-[2px] hover:border-pink-500 hover:bg-pink-500 hover:text-gray-300 focus:ring-3 focus:outline-hidden text-rose-500 transition" href="#">
 						  <span class="block rounded-full bg-transparent px-8 py-3 text-sm font-medium group-hover:bg-transparent">
@@ -242,33 +277,26 @@ import lectura_img from "../assets/about/lecturatabaco.jpeg"
 				</div>
 				<div class="pointer-events-none absolute inset-px rounded-lg ring-1 shadow-sm ring-black/5 lg:rounded-l-[2rem]"></div>
 		  	</div>
-			  
-			  
-			  
 
 		  </div>
 		</div>
 	</section>
 
 	<section id="sec-nosotros" class="bg-gray-900/75 relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
-		<!-- Imagen de fondo -->
+		
 		<img src={lectura_img.src} alt="" class="absolute inset-0 -z-10 size-full object-cover object-right md:object-center">
 		
-		<!-- Capa semitransparente sobre la imagen -->
 		<div class="absolute inset-0 bg-gray-900/75 z-10"></div>
 
-		<!-- Elemento decorativo en la parte superior -->
 		<div class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl" aria-hidden="true">
 			<div class="aspect-1097/845 w-[68.5625rem] bg-linear-to-tr from-[#ff4694] to-[#776fff] opacity-20" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
 		</div>
 		
-		<!-- Elemento decorativo en la parte inferior -->
 		<div class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu" aria-hidden="true">
 			<div class="aspect-1097/845 w-[68.5625rem] bg-linear-to-tr from-[#ff4694] to-[#776fff] opacity-20" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
 		</div>
 
-		<!-- Contenido principal -->
-		<div class="mx-auto max-w-7xl px-6 lg:px-8 relative z-20"> <!-- Añadí z-20 aquí para que el texto esté por encima de todo -->
+		<div class="mx-auto max-w-7xl px-6 lg:px-8 relative z-20"> 
 			<div class="mx-auto max-w-2xl lg:mx-0">
 			<h2 class="text-5xl font-semibold tracking-tight text-teal-600 sm:text-7xl">Nosotros</h2>
 			<p class="mt-8 text-lg font-medium text-pretty text-gray-300 sm:text-xl/8">C​onmigo encontrará esa solución que parece imposible, yo puedo ayudarle con sus problemas de amor, diferencias de pareja y traerle el bienestar a su hogar.</p>
@@ -377,10 +405,10 @@ import lectura_img from "../assets/about/lecturatabaco.jpeg"
 		<div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 ">
 			<div class="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
 
-				<div class="flex items-center bg-gray-50 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 h-64">
+				<div class="flex items-center bg-gray-50 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 h-64 transition-transform transform hover:scale-105 hover:bg-gray-100 dark:hover:bg-gray-700">
 					<a href="#" class="w-1/2 h-full">
-					  <img class="w-full h-full object-cover rounded-lg sm:rounded-none sm:rounded-l-lg" 
-						   src={amarre_img.src} alt="Bonnie Avatar">
+						<img class="w-full h-full object-cover rounded-lg sm:rounded-none sm:rounded-l-lg" 
+							src={amarre_img.src} alt="Bonnie Avatar">
 					</a>			  
 					<div class="w-1/2 p-5 flex flex-col justify-between">
 						<h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -399,11 +427,10 @@ import lectura_img from "../assets/about/lecturatabaco.jpeg"
 					</div>
 				</div>
 			
-				<div class="flex items-center bg-gray-50 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 h-64">
-
+				<div class="flex items-center bg-gray-50 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 h-64 transition-transform transform hover:scale-105 hover:bg-gray-100 dark:hover:bg-gray-700">
 					<a href="#" class="w-1/2 h-full">
-					  <img class="w-full h-full object-cover rounded-lg sm:rounded-none sm:rounded-l-lg" 
-						   src={copas_img.src} alt="Jese Avatar">
+						<img class="w-full h-full object-cover rounded-lg sm:rounded-none sm:rounded-l-lg" 
+							src={copas_img.src} alt="Jese Avatar">
 					</a>
 					<div class="w-1/2 p-5 flex flex-col justify-between">
 						<h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -422,16 +449,16 @@ import lectura_img from "../assets/about/lecturatabaco.jpeg"
 					</div>
 				</div>
 			
-				<div class="flex items-center bg-gray-50 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 h-64">
+				<div class="flex items-center bg-gray-50 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 h-64 transition-transform transform hover:scale-105 hover:bg-gray-100 dark:hover:bg-gray-700">
 					<a href="#" class="w-1/2 h-full">
-					  <img class="w-full h-full object-cover rounded-lg sm:rounded-none sm:rounded-l-lg" 
-						   src={love_img.src} alt="Michael Avatar">
-					</a>				  
+						<img class="w-full h-full object-cover rounded-lg sm:rounded-none sm:rounded-l-lg" 
+							src={copas_img.src} alt="Jese Avatar">
+					</a>
 					<div class="w-1/2 p-5 flex flex-col justify-between">
 						<h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-							<a href="#">Amarres de amor</a>
+							<a href="#">Regreso del ser amado</a>
 						</h3>
-						<p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">No sufras más en silencio, resultados en 24 horas.</p>
+						<p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">Triunfo donde muchos han fracasado.</p>
 						<ul class="flex space-x-4 sm:mt-0">
 							<li>
 								<a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
@@ -444,10 +471,10 @@ import lectura_img from "../assets/about/lecturatabaco.jpeg"
 					</div>
 				</div>
 			
-				<div class="flex items-center bg-gray-50 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 h-64">
+				<div class="flex items-center bg-gray-50 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 h-64 transition-transform transform hover:scale-105 hover:bg-gray-100 dark:hover:bg-gray-700">
 					<a href="#" class="w-1/2 h-full">
-					  <img class="w-full h-full object-cover rounded-lg sm:rounded-none sm:rounded-l-lg" 
-						   src={vela_img.src} alt="Sofia Avatar">
+						<img class="w-full h-full object-cover rounded-lg sm:rounded-none sm:rounded-l-lg" 
+							src={vela_img.src} alt="Sofia Avatar">
 					</a>	
 					<div class="w-1/2 p-5 flex flex-col justify-between">
 						<h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -465,6 +492,7 @@ import lectura_img from "../assets/about/lecturatabaco.jpeg"
 						</ul>
 					</div>
 				</div>
+				
 			</div>
 			  
 		</div>
@@ -481,9 +509,7 @@ import lectura_img from "../assets/about/lecturatabaco.jpeg"
 					 <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
 						 <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
 					 </svg>
-				</a>
-				 
-				 
+				</a>	 
 				
 			</div>
 			<div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
@@ -492,64 +518,177 @@ import lectura_img from "../assets/about/lecturatabaco.jpeg"
 		</div>
 	</section>
 
-
-
-	
-
-	<div class="bg-black">
+	<section class="bg-black">
 		<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 		  <div class="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
-			<h2 class="text-2xl font-bold text-gray-900">Algo</h2>
+			<h2 class="text-2xl font-bold text-gray-300">Mas detalles</h2>
 	  
 			<div class="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
-			  <div class="group relative">
-				<img src="" alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug." class="w-full rounded-lg bg-white object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-2/1 lg:aspect-square">
-				<h3 class="mt-6 text-sm text-gray-500">
-				  <a href="#">
-					<span class="absolute inset-0"></span>
-					Algo
-				  </a>
-				</h3>
-				<p class="text-base font-semibold text-gray-900">Algo</p>
-			  </div>
-			  <div class="group relative">
-				<img src="" alt="Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant." class="w-full rounded-lg bg-white object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-2/1 lg:aspect-square">
-				<h3 class="mt-6 text-sm text-gray-500">
-				  <a href="#">
-					<span class="absolute inset-0"></span>
-					Algo
-				  </a>
-				</h3>
-				<p class="text-base font-semibold text-gray-900">Algo</p>
-			  </div>
-			  <div class="group relative">
-				<img src="" alt="Collection of four insulated travel bottles on wooden shelf." class="w-full rounded-lg bg-white object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-2/1 lg:aspect-square">
-				<h3 class="mt-6 text-sm text-gray-500">
-				  <a href="#">
-					<span class="absolute inset-0"></span>
-					Algo
-				  </a>
-				</h3>
-				<p class="text-base font-semibold text-gray-900">Algo</p>
-			  </div>
+				<div class="group relative">
+					
+					<img src={family_img.src} alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug." class="w-full rounded-lg bg-white object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-2/1 lg:aspect-square">
+				  
+					<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+					  
+					  <div class="bg-black bg-opacity-50 p-6 rounded-lg">
+						<div class="text-center text-white">
+						  <h3 class="text-sm">
+							<a href="#">
+							  <span class="absolute inset-0"></span>
+							  Regreso del ser amado
+							</a>
+						  </h3>
+						  <p class="text-base font-semibold">
+							Uso las diferentes técnicas y rituales espirituales con magia blanca para retirar conjuros de mala suerte, envidias y alejo todo obstáculo que le impida obtener el bienestar y felicidad que tanto desea para su vida. No importa la distancia, realizo el mejor trabajo para romper cualquier hechicería que le hayan hecho a través de nuestras técnicas de magia blanca y hechizos de protección.
+						  </p>
+						</div>
+					  </div>
+					</div>
+				</div>
+				  
+				<div class="group relative">
+					
+					<img src={hands_img.src} alt="Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant." class="w-full rounded-lg bg-white object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-2/1 lg:aspect-square">
+				  
+					
+					<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+					  
+					  <div class="bg-black bg-opacity-50 p-6 rounded-lg">
+						<div class="text-center text-white">
+						  <h3 class="text-sm">
+							<a href="#">
+							  <span class="absolute inset-0"></span>
+							  Amarre Sexual
+							</a>
+						  </h3>
+						  <p class="text-base font-semibold">
+							Cuando se encuentra a esa persona que logra llenarnos el corazón de felicidad, entendemos que una buena intimidad es fundamental para que el amor permanezca y perdura por siempre. Acuda a nosotros para que pueda disfrutar al máximo las posibilidades físicas que el cuerpo brinda a través de nuestros amarres sexuales y hechizos de pareja. Permita que la conexión con esa persona alcance la cima del placer gracias a nuestros hechizos sexuales realizados especialmente por nuestros expertos.
+						  </p>
+						</div>
+					  </div>
+					</div>
+				</div>  
+
+				<div class="group relative">
+					
+					<img src={pasion_img.src} alt="Collection of four insulated travel bottles on wooden shelf." class="w-full rounded-lg bg-white object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-2/1 lg:aspect-square">
+				  
+					
+					<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+					  
+					  <div class="bg-black bg-opacity-50 p-6 rounded-lg">
+						<div class="text-center text-white">
+						  <h3 class="text-sm">
+							<a href="#">
+							  <span class="absolute inset-0"></span>
+							  Familia y Salud
+							</a>
+						  </h3>
+						  <p class="text-base font-semibold">
+							Un equilibrio entre cuerpo y mente es fundamental para que pueda sentir la plenitud de la vida, pues cuando se logra esa estabilidad cualquier meta que se proponga estará a su alcance sin mayor dificultad. Por eso, cuando acuda a nosotros será cuestión de tiempo para que recupere esa salud que se le ha ido, y para que pueda encaminarse y empezar a trabajar por aquello que tanto ha soñado.
+						  </p>
+						</div>
+					  </div>
+					</div>
+				</div>
+				  
 			</div>
 		  </div>
 		</div>
-	</div>
+	</section>
 	  
+
+	<section id="sec-contact" class="relative isolate overflow-hidden py-24 sm:py-32">
+		<div class="absolute inset-0 bg-gray-900/75 -z-10"></div>
+		
+		<img src={vela_img.src} alt="" class="absolute inset-0 -z-20 size-full object-cover object-right md:object-center">
+		
+		<div class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl" aria-hidden="true">
+		  <div class="aspect-1097/845 w-[68.5625rem] bg-linear-to-tr from-[#ff4694] to-[#776fff] opacity-20" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+		</div>
+		
+		<div class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu" aria-hidden="true">
+		  <div class="aspect-1097/845 w-[68.5625rem] bg-linear-to-tr from-[#ff4694] to-[#776fff] opacity-20" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+		</div>
 	  
-	<div id="sec-contact" class="bg-black">
 		<div class="mx-auto max-w-7xl px-6 lg:px-8">
-		  <h2 class="text-center text-lg/8 font-semibold text-gray-900">Trusted by the world’s most innovative teams</h2>
-		  <div class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
-			<img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="https://tailwindui.com/plus-assets/img/logos/158x48/transistor-logo-gray-900.svg" alt="Transistor" width="158" height="48">
-			<img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="https://tailwindui.com/plus-assets/img/logos/158x48/reform-logo-gray-900.svg" alt="Reform" width="158" height="48">
-			<img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="https://tailwindui.com/plus-assets/img/logos/158x48/tuple-logo-gray-900.svg" alt="Tuple" width="158" height="48">
-			<img class="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1" src="https://tailwindui.com/plus-assets/img/logos/158x48/savvycal-logo-gray-900.svg" alt="SavvyCal" width="158" height="48">
-			<img class="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1" src="https://tailwindui.com/plus-assets/img/logos/158x48/statamic-logo-gray-900.svg" alt="Statamic" width="158" height="48">
+		  <div class="mx-auto max-w-2xl lg:mx-0">
+			<h2 class="text-5xl font-semibold tracking-tight text-rose-500 sm:text-7xl">Contactenos</h2>
 		  </div>
 		</div>
-	</div>
+	</section>
+	  
+	<section class="bg-black">
+		<div class="grid max-w-screen-xl px-4 py-4 mx-auto lg:gap-6 xl:gap-0 lg:py-8 lg:grid-cols-12">
+		  <div class="mr-auto place-self-center lg:col-span-7">
+			<h2 class="max-w-2xl mb-4 font-light text-gray-500 lg:mb-6 md:text-md lg:text-lg dark:text-rose-500">
+			  Recupere su ser amado, Sane su ser
+			</h2>
+			<p class="max-w-2xl mb-4 font-light text-gray-500 lg:mb-6 md:text-md lg:text-lg dark:text-gray-400">
+			  No espere mas, consulte ahora y recupere a las personas que ama y que quiere que esten con usted.
+			</p>
+			<a href="https://api.whatsapp.com/send/?phone=34613943413&text&type=phone_number&app_absent=0" 
+			  class="inline-flex items-center justify-center px-4 py-2 mr-3 text-sm font-medium text-center text-white rounded-lg bg-primary-700 hover:text-rose-500 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
+			  whatsapp
+			  <svg class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+				<path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+			  </svg>
+			</a>
+		  </div>
+		  <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
+			<img src={pedestal_img.src} alt="mockup" class="max-w-full h-48 object-cover" />
+		  </div>
+		</div>
+	  </section>
+	  
+	  <section class="bg-black">
+		<div class="grid max-w-screen-xl px-4 py-4 mx-auto lg:gap-6 xl:gap-0 lg:py-8 lg:grid-cols-12">
+		  
+		  <div class="lg:col-span-5 lg:flex justify-start">
+			<img src={amarre_img.src} alt="mockup" class="max-w-full h-48 object-cover" />
+		  </div>
+	  
+		  <div class="mr-auto place-self-center lg:col-span-7 lg:ml-4">
+			<h2 class="max-w-2xl mb-4 font-light text-gray-500 lg:mb-6 md:text-md lg:text-lg dark:text-rose-500">
+			  Amarres
+			</h2>
+			<p class="max-w-2xl mb-4 font-light text-gray-500 lg:mb-6 md:text-md lg:text-lg dark:text-gray-400">
+			  En ocasiones los amarres pueden tener un resultado inmediato, a veces pueden transcurrir días, pero al final muestran todo su poder. En todo este tiempo nuestra cabeza debe estar enfocada en esa persona, porque quién algo quiere, algo le cuesta. Es indispensable la fe, la paciencia, las ganas y dejar que todo se ponga a nuestro favor para que consigamos nuestro objetivo.
+			</p>
+			<a href="https://api.whatsapp.com/send/?phone=34613943413&text&type=phone_number&app_absent=0" 
+			  class="inline-flex items-center justify-center px-4 py-2 mr-3 text-sm font-medium text-center text-white rounded-lg bg-primary-700 hover:text-rose-500 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
+			  whatsapp
+			  <svg class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+				<path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+			  </svg>
+			</a>
+		  </div>
+		</div>
+	  </section>
+	  
+	  <section class="bg-black">
+		<div class="grid max-w-screen-xl px-4 py-4 mx-auto lg:gap-6 xl:gap-0 lg:py-8 lg:grid-cols-12">
+		  <div class="mr-auto place-self-center lg:col-span-7">
+			<h2 class="max-w-2xl mb-4 font-light text-gray-500 lg:mb-6 md:text-md lg:text-lg dark:text-rose-500">
+			  Alejamientos
+			</h2>
+			<p class="max-w-2xl mb-4 font-light text-gray-500 lg:mb-6 md:text-md lg:text-lg dark:text-gray-400">
+			  Evita las malas energías y supérate, tendrás la capacidad de ver más allá y eliminar de tu vida a todas las personas y hechizos que sobre ti han puesto.
+			</p>
+			<a href="https://api.whatsapp.com/send/?phone=34613943413&text&type=phone_number&app_absent=0" 
+			  class="inline-flex items-center justify-center px-4 py-2 mr-3 text-sm font-medium text-center text-white rounded-lg bg-primary-700 hover:text-rose-500 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
+			  whatsapp
+			  <svg class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+				<path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+			  </svg>
+			</a>
+		  </div>
+		  <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
+			<img src={pedestal_img2.src} alt="mockup" class="max-w-full h-48 object-cover" />
+		  </div>
+		</div>
+	  </section>
+	  
 	  
 
   
@@ -558,7 +697,7 @@ import lectura_img from "../assets/about/lecturatabaco.jpeg"
 </Start>
 
 <script>
-	// Asegúrate de que el script se ejecute solo cuando el DOM esté completamente cargado.
+	
 	document.addEventListener('DOMContentLoaded', function () {
 	  const imagenes = [
 		'http://localhost:4321/src/assets/slider/amarre.jpeg',
@@ -570,19 +709,26 @@ import lectura_img from "../assets/about/lecturatabaco.jpeg"
 	  let index = 0;
   
 	  function cambiarImagen() {
-		// Cambiar la clase de fondo en el div
+		
 		const fondo = document.getElementById('imagen-fondo');
 		if (fondo) {
 		  fondo.style.backgroundImage = `url(${imagenes[index]})`;
 		}
-		index = (index + 1) % imagenes.length; // Cambiar la imagen y hacer que vuelva al principio
+		index = (index + 1) % imagenes.length; 
 	  }
   
-	  // Cambiar la imagen cada 5 segundos
 	  setInterval(cambiarImagen, 5000);
   
-	  // Inicializar la primera imagen
 	  cambiarImagen();
 	});
 </script>
   
+<script type="module" >
+	const menuButton = document.getElementById('menuButton');
+	const dropdownMenu = document.getElementById('dropdownMenu');
+	
+	// Toggle the menu visibility when button is clicked
+	menuButton.addEventListener('click', () => {
+	  dropdownMenu.classList.toggle('hidden');
+	});
+</script>
