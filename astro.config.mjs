@@ -9,6 +9,6 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  site: 'https://clientes.prosperidadyunion.com',
+  site: 'https://consultas.prosperidadyunion.com',
   base: '/'
 });
