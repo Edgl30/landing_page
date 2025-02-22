@@ -9,6 +9,6 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  site: 'https://jptolozac.github.io',
-  base: 'prosperidad_union'
+  site: 'https://consultas.prosperidadyunion.com',
+  base: '/'
 });
