@@ -8,4 +8,15 @@ header {
     z-index: 1000; /* Para asegurarte de que el header esté sobre otros elementos */
 }
   
+.animate-zoom {
+    animation: zoom 5s linear;
+}
 
+@keyframes zoom {
+    from {
+        scale: 1.25
+    }
+    to {
+        scale: 1;
+    }
+}

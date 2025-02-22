@@ -30,9 +30,7 @@ const imagenes = [
 	tabaco_img.src,
 	tarot_img.src
 ]
-
 ---
-
 <Start>
 
 	<header class="bg-black dark:bg-black">
@@ -168,8 +166,9 @@ const imagenes = [
 	</section>
   
 	<section
-		id="imagen-fondo" class="relative bg-cover bg-center bg-no-repeat"
-		>
+		class="relative bg-cover bg-center bg-no-repeat overflow-hidden"
+	>
+		<div id="imagen-fondo" class="absolute w-full h-full" />
 		<div
 		class="absolute inset-0 bg-gray-900/75 sm:bg-transparent sm:from-gray-900/95 sm:to-gray-900/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"
 		></div>
@@ -661,22 +660,35 @@ const imagenes = [
 </Start>
 
 <script define:vars={{imagenes}}>
-	
-	document.addEventListener('DOMContentLoaded', function () {  
-	  let index = 0;
-  
-	  function cambiarImagen() {
-		const fondo = document.getElementById('imagen-fondo');
-		if (fondo) {
-		  fondo.style.backgroundImage = `url(${imagenes[index]})`;
-		}
-		index = (index + 1) % imagenes.length; 
-	  }
-  
-	  setInterval(cambiarImagen, 5000);
-  
-	  cambiarImagen();
+	imagenes.forEach(src => {
+		const img = new Image();
+		img.src = src;
 	});
+
+	document.addEventListener("DOMContentLoaded", () => {
+		const fondo = document.getElementById('imagen-fondo');
+		fondo.classList.add("animate-zoom")
+		let index = 0;
+	
+		function cambiarImagen() {
+			if("animate-zoom" in fondo.classList){
+				fondo.classList.remove("animate-zoom")
+			}
+			if (fondo) {
+				fondo.style.backgroundImage = `url(${imagenes[index]})`;
+			}
+			index = (index + 1) % imagenes.length; 
+			if(!("animate-zoom" in fondo.classList)){
+				fondo.classList.add("animate-zoom")
+			}
+		}
+	
+		setInterval(cambiarImagen, 5000);
+	
+		cambiarImagen();
+	})
+
+
 </script>
   
 <script type="module" >
