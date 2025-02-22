@@ -23,6 +23,14 @@ import pasion_img from "../assets/slider_buttom/pasion.jpg"
 
 import pedestal_img from "../assets/contact/pedestal.jpeg"
 import pedestal_img2 from "../assets/contact/pedestal2.jpeg"
+
+const imagenes = [
+	amarre_img.src,
+	amarres_lov_img.src,
+	tabaco_img.src,
+	tarot_img.src
+]
+
 ---
 
 <Start>
@@ -696,16 +704,9 @@ import pedestal_img2 from "../assets/contact/pedestal2.jpeg"
 
 </Start>
 
-<script>
+<script define:vars={{imagenes}}>
 	
-	document.addEventListener('DOMContentLoaded', function () {
-	  const imagenes = [
-		'../src/assets/slider/amarre.jpeg',
-		'../src/assets/slider/amarresdeamor.jpeg',
-		'../src/assets/slider/tabaco.jpg',
-		'../src/assets/slider/tarot.jpg'
-	  ];
-  
+	document.addEventListener('DOMContentLoaded', function () {  
 	  let index = 0;
   
 	  function cambiarImagen() {
