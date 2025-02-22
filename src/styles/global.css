@@ -9,7 +9,7 @@ header {
 }
   
 .animate-zoom {
-    animation: zoom 5s linear;
+    animation: zoom 5s linear infinite;
 }
 
 @keyframes zoom {
