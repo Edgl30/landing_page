@@ -2,64 +2,78 @@
 import Start from '../layouts/Start.astro';
 import "../styles/global.css";
 
-import amarre_img from "../assets/slider/amarre.webp";
-import amarres_lov_img from "../assets/slider/amarresdeamor.webp";
-import tabaco_img from "../assets/slider/tabaco.webp";
-import tarot_img from "../assets/slider/tarot.webp";
-
-import copas_img from "../assets/service/copas.jpg";
-import love_img from "../assets/service/love2.jpg";
-import spirit_img from "../assets/service/spiritu.jpg";
-import tarot_img2 from "../assets/service/tarot2.jpg";
-import vela_img from "../assets/service/vela.jpg";
+import ballena from "../assets/slider/ballena.jpg";
+import cocodrilo from "../assets/slider/cocodrilo.jpg";
+import lirio from "../assets/slider/lirio.jpg";
+import mantaraya from "../assets/slider/mantaraya.jpg";
+import mariposa from "../assets/slider/mariposa.jpg";
+import orquidea from "../assets/slider/orquidea.jpg";
+import oso_polar from "../assets/slider/oso_polar.jpg";
+import sapo from "../assets/slider/sapo.jpg";
+import tiburon_martillo from "../assets/slider/tiburon_martillo.jpg";
 
 import whatsapp_icon from "../assets/whatsapp.png";
-import hechizos_img from "../assets/secctions/hechizos.jpg"
-import lectura_img from "../assets/about/lecturatabaco.jpeg"
 
-import family_img from "../assets/slider_buttom/family.jpg"
-import hands_img from "../assets/slider_buttom/hands.jpg"
-import pasion_img from "../assets/slider_buttom/pasion.jpg"
+import about_image from "../assets/about/second_image.jpg"
 
-import pedestal_img from "../assets/contact/pedestal.jpeg"
-import pedestal_img2 from "../assets/contact/pedestal2.jpeg"
+import fondo_horizontal from "../assets/slider/fondo_horizontal.jpg"
+
+
+import cocodrilo_front from "../assets/slider_buttom/front/cocodrilo_front.jpg";
+import lirio_front from "../assets/slider_buttom/front/lirio_front.jpg";
+import mantaraya_front from "../assets/slider_buttom/front/mantaraya_front.jpg";
+import orquidea_front from "../assets/slider_buttom/front/orquidea_front.jpg";
+import oso_polar_front from "../assets/slider_buttom/front/oso_polar_front.jpg";
+import sapo_front from "../assets/slider_buttom/front/rana_front.jpg";
+import tiburon_martillo_front from "../assets/slider_buttom/front/tiburon_martillo_front.jpg";
+import { swapFunctions } from 'astro/virtual-modules/transitions-swap-functions.js';
+
+
+
+const imagenes_front = [
+	cocodrilo_front.src,
+	lirio_front.src,
+	mantaraya_front.src,
+	orquidea_front.src,
+	oso_polar_front.src,
+	sapo_front.src,
+	tiburon_martillo_front.src,
+]
 
 const imagenes = [
-	amarre_img.src,
-	amarres_lov_img.src,
-	tabaco_img.src,
-	tarot_img.src
+	ballena.src,
+	cocodrilo.src,
+	lirio.src,
+	mantaraya.src,
+	mariposa.src,
+	orquidea.src,
+	oso_polar.src,
+	sapo.src,
+	tiburon_martillo.src,
 ]
+
+
+
+
+let productos_screen = 4;
 ---
 <Start>
 
 	<header class="bg-black dark:bg-black">
 		<div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
 		  <div class="flex h-16 items-center justify-between">
+
 			<div class="md:flex md:items-center md:gap-12">
-			  <a class="block text-teal-600 dark:text-teal-600" href="#">
+			  <a class="block text-emerald-800 dark:text-emerald-800" href="#">
 				<span class="sr-only">Home</span>
-				<h2 class="font-bold">Prosperidad y union</h2>
+				<h2 class="font-bold">Micro Planet</h2>
 			  </a>
 			</div>
 	  
 			<div class="hidden md:block">
 			  <nav aria-label="Global">
 				<ul class="flex items-center gap-6 text-sm">
-				  <li>
-					<a
-					class="group inline-block rounded-full bg-gradient-to-r from-rose-500 via-rose-500 to-yellow-500 p-[2px] hover:text-white focus:ring-3 focus:outline-hidden text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
-					href="#imagen-fondo"
-					>
-					<span
-						class="block rounded-full bg-black px-8 py-3 text-sm font-medium group-hover:bg-transparent"
-					>
-						Inicio
-					</span>
-					</a>
-
-				  </li>
-	  
+				 
 				  <li>
 					<a
 					  class="text-gray-500 transition-all duration-300 ease-in-out hover:text-lg dark:text-gray-300 dark:hover:text-white/75"
@@ -68,14 +82,13 @@ const imagenes = [
 					  Nosotros
 					</a>
 				  </li>
-								
-	  
+
 				  <li>
 					<a
 					  class="text-gray-500 transition-all duration-300 ease-in-out hover:text-lg dark:text-gray-300 dark:hover:text-white/75"
-					  href="#sec-servicios"
+					  href="#sec-productos"
 					>
-					  Servicios
+					  Productos
 					</a>
 				  </li>
 	  
@@ -86,6 +99,20 @@ const imagenes = [
 					>
 					  Contactenos
 					</a>
+				  </li>
+
+				  <li>
+					<a
+					class="group inline-block rounded-full bg-gradient-to-r from-blue-900 via-emerald-800 to-blue-900 p-[2px] hover:text-white focus:ring-3 focus:outline-hidden text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
+					href="#imagen-fondo"
+					>
+					<span
+						class="block rounded-full bg-black px-8 py-3 text-sm font-medium group-hover:bg-transparent"
+					>
+						Inicio
+					</span>
+					</a>
+
 				  </li>
 				</ul>
 			  </nav>
@@ -109,7 +136,7 @@ const imagenes = [
 					<div id="dropdownMenu" class="hidden absolute left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4">
 					  <div class="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-black text-sm/6 ring-1 shadow-lg ring-gray-900/5">
 						<div class="p-4">
-						  <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-rose-500">
+						  <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-blue-900">
 							<div>
 							  <a href="#imagen-fondo" class="font-semibold text-gray-500">
 								Inicio
@@ -129,7 +156,7 @@ const imagenes = [
 						  <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-300">
 							<div>
 							  <a href="#sec-servicios" class="font-semibold text-gray-500">
-								Servicios
+								Productos
 								<span class="absolute inset-0"></span>
 							  </a>
 							</div>
@@ -156,10 +183,11 @@ const imagenes = [
 		  </div>
 		</div>
 	</header>
+
 	<section class="sm:flex sm:gap-4 fixed bottom-4 right-4 z-50">
 		<h1 class="sr-only">Las mejores técnicas de SEO</h1>
 		<a
-			class="flex rounded-full bg-teal-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-teal-700 dark:hover:transparent"
+			class="flex rounded-full bg-teal-800 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-teal-700 dark:hover:transparent"
 			href="https://api.whatsapp.com/send/?phone=34613943413&text&type=phone_number&app_absent=0"
 			>
 			<img src={whatsapp_icon.src} class="h-8 w-auto" />
@@ -182,202 +210,37 @@ const imagenes = [
 		<div class="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
 			<h1 class="text-3xl font-extrabold text-white sm:text-5xl">
 			
-			<strong class="block font-extrabold text-rose-500"> Prosperidad y union. </strong>
+			<strong class="block font-extrabold text-teal-800"> Pendientes artesanales. </strong>
 			</h1>
 
 			<p class="mt-4 max-w-lg text-gray-300 sm:text-xl/relaxed">
-				Traemos prosperidad, dinero y amor a tu vida con ayuda de nuestros poderosos hechizos 
+				Pendientes artesanales únicos, donde la calidad de los materiales se encuentra con la dedicación de cada detalle, creando piezas que reflejan pasión y elegancia en cada diseño.
 			</p>
 
 			<div class="mt-8 flex flex-wrap gap-4 text-center">
 			
 			<a
-				href="https://api.whatsapp.com/send/?phone=34613943413&text&type=phone_number&app_absent=0"
-				class="block w-full rounded-sm bg-gray-300 px-12 py-3 text-sm font-medium text-rose-600 shadow-sm hover:bg-gray-400 hover:text-rose-700 focus:ring-3 focus:outline-hidden sm:w-auto"
+				href=""
+				class="block w-full rounded-sm bg-gray-300 px-12 py-3 text-sm font-medium text-teal-800 shadow-sm hover:bg-gray-400 hover:text-black focus:ring-3 focus:outline-hidden sm:w-auto"
 			>
-				Consulta Gratuita
+				Contactanos
 			</a>
 			</div>
 		</div>
 		</div>
 	</section>
 
-	<section id="sec_target" class="bg-black py-24 sm:py-32">
-		<h1 class="sr-only">Las mejores técnicas de SEO</h1>
-		<div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
-		  	<div class="bg-gray-900 bg-center p-8 mx-4 my-6 rounded-tl-lg rounded-br-lg">
-				<p class="mx-auto mt-2 max-w-full px-4 py-8 text-center text-2xl tracking-tight text-balance text-gray-300 sm:text-3xl"	>Atrae el dinero, el empleo, la suerte y la felicidad que usted merece. Mis rituales, conjuros y hechizos son poderosos y efectivos. 
-				<br><br>
-				Le brindo la protección que necesita para que la prosperidad entre en su hogar, en su relación y en su vida en general, nada tan efectivo y rápido como los antiguos rituales de protección con magia negra, blanca, budo cubano y santería africana.</p>
-				<a href="https://api.whatsapp.com/send/?phone=34613943413&text&type=phone_number&app_absent=0" class="text-center text-base font-semibold text-rose-500 hover:text-lg transition-all duration-300"><h2> Consultar ahora</h2></a>
-
-		  	</div>
-		  
-		<div class="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
-
-			<div class="relative lg:row-span-2 transition-all duration-300 transform hover:scale-105">
-				<div class="absolute inset-px rounded-lg bg-gray-900 lg:rounded-l-[2rem]"></div>
-				<div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
-				  <div class="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
-					<p class="mt-2 text-lg font-medium tracking-tight text-gray-300 max-lg:text-center">Amarres Garantizados</p>
-				  </div>
-				  <div class="@container relative min-h-[30rem] w-full grow max-lg:mx-auto max-lg:max-w-sm">
-					<div class="absolute inset-x-10 top-10 bottom-5 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 shadow-2xl">
-					  <div class="absolute inset-0 bg-gray-900/75 z-10"></div>
-					  <img class="size-full object-cover object-top w-full h-full" src={hechizos_img.src} alt="">
-			
-					  <div class="absolute bottom-0 w-full flex justify-center mb-6 z-20">
-						<a href="https://api.whatsapp.com/send/?phone=34613943413&text&type=phone_number&app_absent=0" class="group inline-block rounded-full bg-transparent border-2 border-rose-500 p-[2px] hover:border-pink-500 hover:bg-pink-500 hover:text-gray-300 focus:ring-3 focus:outline-hidden text-rose-500 transition" href="#">
-						  <span class="block rounded-full bg-transparent px-8 py-3 text-sm font-medium group-hover:bg-transparent">
-							Comenzar
-						  </span>
-						</a>
-					  </div>
-					</div>
-				  </div>
-				</div>
-				<div class="pointer-events-none absolute inset-px rounded-lg ring-1 shadow-sm ring-black/5 lg:rounded-l-[2rem]"></div>
-			</div>
-			  
-			<div class="relative lg:row-span-2 transition-all duration-300 transform hover:scale-105">
-				<div class="absolute inset-px rounded-lg bg-gray border border-teal-600 max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]"></div>
-				<div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]">
-				  <div class="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
-					<p class="mt-2 text-lg font-medium tracking-tight text-teal-600 max-lg:text-center">Pague por Resultados</p>
-				  </div>
-				  <div class="@container relative min-h-[30rem] w-full grow max-lg:mx-auto max-lg:max-w-sm">
-					<div class="absolute inset-x-10 top-10 bottom-5 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl">
-					  <div class="absolute inset-0 bg-gray-900/75 z-10"></div> 
-					  <img class="size-full object-cover object-top w-full h-full" src={tabaco_img.src} alt="">
-					
-					  <div class="absolute bottom-0 w-full flex justify-center mb-6 z-20">
-						<a href="https://api.whatsapp.com/send/?phone=34613943413&text&type=phone_number&app_absent=0" class="group inline-block rounded-full bg-transparent border-2 border-teal-600 p-[2px] hover:border-teal-500 hover:bg-teal-500 hover:text-gray-300 focus:ring-3 focus:outline-hidden text-teal-600 transition" href="#">
-						  <span class="block rounded-full bg-transparent px-8 py-3 text-sm font-medium group-hover:bg-transparent">
-							Comenzar
-						  </span>
-						</a>
-					  </div>
-					</div>
-				  </div>
-				</div>
-				<div class="pointer-events-none absolute inset-px rounded-lg ring-1 shadow-sm ring-black/5 max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]"></div>
-			</div>
-			  
-			<div class="relative lg:row-span-2 transition-all duration-300 transform hover:scale-105">
-				<div class="absolute inset-px rounded-lg bg-gray-900 lg:rounded-l-[2rem]"></div>
-				<div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
-				  <div class="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
-					<p class="mt-2 text-lg font-medium tracking-tight text-gray-300 max-lg:text-center">Hechizos y Brujería</p>
-				  </div>
-				  <div class="@container relative min-h-[30rem] w-full grow max-lg:mx-auto max-lg:max-w-sm">
-					<div class="absolute inset-x-10 top-10 bottom-5 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl">
-					  <div class="absolute inset-0 bg-gray-900/75 z-10"></div> 
-					  <img class="size-full object-cover object-top w-full h-full" src={love_img.src} alt="">
-					  
-					  <div class="absolute bottom-0 w-full flex justify-center mb-6 z-20">
-						<a href="https://api.whatsapp.com/send/?phone=34613943413&text&type=phone_number&app_absent=0" class="group inline-block rounded-full bg-transparent border-2 border-rose-500 p-[2px] hover:border-pink-500 hover:bg-pink-500 hover:text-gray-300 focus:ring-3 focus:outline-hidden text-rose-500 transition" href="#">
-						  <span class="block rounded-full bg-transparent px-8 py-3 text-sm font-medium group-hover:bg-transparent">
-							Comenzar
-						  </span>
-						</a>
-					  </div>
-					</div>
-				  </div>
-				</div>
-				<div class="pointer-events-none absolute inset-px rounded-lg ring-1 shadow-sm ring-black/5 lg:rounded-l-[2rem]"></div>
-		  	</div>
-
-		  </div>
-		</div>
-	</section>
-
-	<section id="sec-nosotros" class="bg-gray-900/75 relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
-		<h1 class="sr-only">Las mejores técnicas de SEO</h1>
-		<img src={lectura_img.src} alt="" class="absolute inset-0 -z-10 size-full object-cover object-right md:object-center">
-		
-		<div class="absolute inset-0 bg-gray-900/75 z-10"></div>
-
-		<div class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl" aria-hidden="true">
-			<div class="aspect-1097/845 w-[68.5625rem] bg-linear-to-tr from-[#ff4694] to-[#776fff] opacity-20" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
-		</div>
-		
-		<div class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu" aria-hidden="true">
-			<div class="aspect-1097/845 w-[68.5625rem] bg-linear-to-tr from-[#ff4694] to-[#776fff] opacity-20" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
-		</div>
-
-		<div class="mx-auto max-w-7xl px-6 lg:px-8 relative z-20"> 
-			<div class="mx-auto max-w-2xl lg:mx-0">
-			<h2 class="text-5xl font-semibold tracking-tight text-teal-600 sm:text-7xl">Nosotros</h2>
-			<p class="mt-8 text-lg font-medium text-pretty text-gray-300 sm:text-xl/8">C​onmigo encontrará esa solución que parece imposible, yo puedo ayudarle con sus problemas de amor, diferencias de pareja y traerle el bienestar a su hogar.</p>
-			</div>
-			<div class="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
-			<div class="grid grid-cols-1 gap-x-8 gap-y-6 text-base/7 font-semibold text-gray-300 sm:grid-cols-2 md:flex lg:gap-x-10">
-				<a href="#sec-servicios">Magia negra <span aria-hidden="true">&rarr;</span></a>
-				<a href="#sec-servicios">Magia Blanca <span aria-hidden="true">&rarr;</span></a>
-				<a href="#sec-servicios">Budo Cubano <span aria-hidden="true">&rarr;</span></a>
-				<a href="#sec-servicios">Santatería Africana <span aria-hidden="true">&rarr;</span></a>
-			</div>
-			<dl class="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
-				<style>
-					.pulse-animation {
-					  animation: pulse 2s ease-in-out infinite;
-					}
-				  
-					@keyframes pulse {
-					  0% { transform: scale(1); }
-					  50% { transform: scale(1.4); }
-					  100% { transform: scale(1); }
-					}
-				  </style>
-				<div class="flex flex-col-reverse gap-1">
-				  <dt class="text-base/7 text-gray-300 flex items-center">
-					<span class="mr-2 text-5xl font-semibold text-rose-500 pulse-animation">
-						+
-					</span>
-					  
-					<span class="mr-2 text-2xl font-semibold text-gray-300">Amor</span>
-				  </dt>
-				  
-				</div>
-			
-
-				<div class="flex flex-col-reverse gap-1">
-					<dt class="text-base/7 text-gray-300 flex items-center">
-						<span class="mr-2 text-5xl font-semibold text-rose-500 pulse-animation">
-							+
-						</span>
-					  <span class="mr-2 text-2xl font-semibold text-gray-300">Prosperidad</span>
-					</dt>
-					
-				</div>
-				
-
-				<div class="flex flex-col-reverse gap-1">
-					<dt class="text-base/7 text-gray-300 flex items-center">
-						<span class="mr-2 text-5xl font-semibold text-rose-500 pulse-animation">
-							+
-						</span>
-					  <span class="mr-2 text-2xl font-semibold text-gray-300">Union</span>
-					</dt>
-					
-				</div>
-			
-			</dl>
-			</div>
-		</div>
-	</section>
-	
 	<section class="bg-black">
 		<h1 class="sr-only">Las mejores técnicas de SEO</h1>
 		<div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
 			<div class="mr-auto place-self-center lg:col-span-7">
-				<h2 class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">HAGO QUE ESA RELACIÓN IMPOSIBLE SE HAGA REALIDAD.</h2>
+				<h2 class="max-w-2xl mb-6 font-light text-emerald-800 lg:mb-8 md:text-lg lg:text-xl dark:text-emerald-800">Sobre Nosotros.</h2>
 				<br>
 				<p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
-					Si usted lleva tiempo esperando por esa persona que parece imposible o inalcanzable, escríbame y le aseguro que en 24 horas usted verá cómo esa persona empieza a sentir un afecto y atracción sexual indescriptible hacia usted. Escriba y compruébelo por usted mismo.</p>
-				<a href="https://api.whatsapp.com/send/?phone=34613943413&text&type=phone_number&app_absent=0" 
-				class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:text-rose-500 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
-				 Contactar
+					En nuestra empresa familiar, nos especializamos en crear pendientes artesanales diseñados con porcelana fría y plata o acero, a elección del cliente, y pintados a mano con un detalle único. Cada pieza es elaborada con esmero y pasión, combinando la calidad de los materiales con la dedicación de cada uno de nosotros. Nos enorgullece ofrecer diseños exclusivos que no solo realzan tu estilo, sino que también llevan consigo la esencia de nuestra familia en cada detalle.</p>
+				<a href="" 
+				class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:text-teal-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
+				 Ver pendientes
 				 <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
 					 <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
 				 </svg>
@@ -386,16 +249,16 @@ const imagenes = [
 				
 			</div>
 			<div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-				<img src={amarre_img.src} alt="mockup">
+				<img src={about_image.src} alt="mockup">
 			</div>                
 		</div>
 	</section>
-	
-	<section id="sec-servicios" class="relative isolate overflow-hidden py-24 sm:py-32">
+
+	<section id="sec-productos" class="relative isolate overflow-hidden py-24 sm:py-32">
 		<h1 class="sr-only">Las mejores técnicas de SEO</h1>
 		<div class="absolute inset-0 bg-gray-900/75 -z-10"></div>
 		
-		<img src={spirit_img.src} alt="" class="absolute inset-0 -z-20 size-full object-cover object-right md:object-center">
+		<img src={fondo_horizontal.src} alt="" class="absolute inset-0 -z-20 size-full object-cover object-right md:object-center">
 		
 		<div class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl" aria-hidden="true">
 		  <div class="aspect-1097/845 w-[68.5625rem] bg-linear-to-tr from-[#ff4694] to-[#776fff] opacity-20" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
@@ -407,65 +270,66 @@ const imagenes = [
 	  
 		<div class="mx-auto max-w-7xl px-6 lg:px-8">
 		  <div class="mx-auto max-w-2xl lg:mx-0">
-			<h2 class="text-5xl font-semibold tracking-tight text-teal-600 sm:text-7xl">Servicios</h2>
+			<h2 class="text-5xl font-semibold tracking-tight text-teal-800 sm:text-7xl">Temas</h2>
 		  </div>
 		</div>
+		
 	</section>
-	
+
 	<section class="bg-black">
 		<h1 class="sr-only">Las mejores técnicas de SEO</h1>
 		<div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 ">
 			<div class="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
 
 				<div class="flex items-center bg-gray-50 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 h-64 transition-transform transform hover:scale-105 hover:bg-gray-100 dark:hover:bg-gray-700">
-					<a href="https://api.whatsapp.com/send/?phone=34613943413&text&type=phone_number&app_absent=0" class="w-1/2 h-full">
+					<a href="" class="w-1/2 h-full">
 						<img class="w-full h-full object-cover rounded-lg sm:rounded-none sm:rounded-l-lg" 
-							src={amarre_img.src} alt="Bonnie Avatar">
+							src={sapo_front.src} alt="Bonnie Avatar">
 					</a>			  
 					<div class="w-1/2 p-5 flex flex-col justify-between">
 						<h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-							<a href="https://api.whatsapp.com/send/?phone=34613943413&text&type=phone_number&app_absent=0">Rituales y pactos para la salud y la prosperidad</a>
+							<a href="">Ambientes terrestres:</a>
 						</h3>
-						<p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">¡Consulta personalizada y confidencial!​</p>
+						<p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">Desde exuberantes bosques hasta vastos desiertos, estos ecosistemas en tierra firme albergan una increíble variedad de vida adaptada a cada clima.​</p>
 					</div>
 				</div>
 			
 				<div class="flex items-center bg-gray-50 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 h-64 transition-transform transform hover:scale-105 hover:bg-gray-100 dark:hover:bg-gray-700">
-					<a href="https://api.whatsapp.com/send/?phone=34613943413&text&type=phone_number&app_absent=0" class="w-1/2 h-full">
+					<a href="" class="w-1/2 h-full">
 						<img class="w-full h-full object-cover rounded-lg sm:rounded-none sm:rounded-l-lg" 
-							src={copas_img.src} alt="Jese Avatar">
+							src={mantaraya_front.src} alt="Jese Avatar">
 					</a>
 					<div class="w-1/2 p-5 flex flex-col justify-between">
 						<h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-							<a href="https://api.whatsapp.com/send/?phone=34613943413&text&type=phone_number&app_absent=0">Regreso del ser amado</a>
+							<a href="">Ambientes acuáticos:</a>
 						</h3>
-						<p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">Triunfo donde muchos han fracasado.</p>
+						<p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">Ríos, lagos y océanos son hogares vibrantes de especies únicas, esenciales para el equilibrio de la vida en el planeta.</p>
 					</div>
 				</div>
 			
 				<div class="flex items-center bg-gray-50 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 h-64 transition-transform transform hover:scale-105 hover:bg-gray-100 dark:hover:bg-gray-700">
-					<a href="https://api.whatsapp.com/send/?phone=34613943413&text&type=phone_number&app_absent=0" class="w-1/2 h-full">
+					<a href="" class="w-1/2 h-full">
 						<img class="w-full h-full object-cover rounded-lg sm:rounded-none sm:rounded-l-lg" 
-							src={love_img.src} alt="Jese Avatar">
+							src={oso_polar_front.src} alt="Jese Avatar">
 					</a>
 					<div class="w-1/2 p-5 flex flex-col justify-between">
 						<h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-							<a href="https://api.whatsapp.com/send/?phone=34613943413&text&type=phone_number&app_absent=0">Amarres de amor</a>
+							<a href="">Ambientes polares:</a>
 						</h3>
-						<p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">No sufras más en silencio, resultados en 24 horas.</p>
+						<p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">En los extremos del mundo, la tundra y los glaciares sobreviven en un frío implacable, con vida que desafía las condiciones más duras.</p>
 					</div>
 				</div>
 			
 				<div class="flex items-center bg-gray-50 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 h-64 transition-transform transform hover:scale-105 hover:bg-gray-100 dark:hover:bg-gray-700">
-					<a href="https://api.whatsapp.com/send/?phone=34613943413&text&type=phone_number&app_absent=0" class="w-1/2 h-full">
+					<a href="" class="w-1/2 h-full">
 						<img class="w-full h-full object-cover rounded-lg sm:rounded-none sm:rounded-l-lg" 
-							src={vela_img.src} alt="Sofia Avatar">
+							src={lirio_front.src} alt="Sofia Avatar">
 					</a>	
 					<div class="w-1/2 p-5 flex flex-col justify-between">
 						<h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
-							<a href="https://api.whatsapp.com/send/?phone=34613943413&text&type=phone_number&app_absent=0">Magia negra, Magia Blanca, Budo Cubano y Santatería Africana</a>
+							<a href="">Flora:</a>
 						</h3>
-						<p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">Encuentra tu felicidad por medio de estos rituales.</p>
+						<p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">Desde los árboles tropicales hasta los cactus del desierto, la flora se adapta a cada ambiente, manteniendo el equilibrio natural y sustentando la vida en el planeta.</p>
 					</div>
 				</div>
 				
@@ -475,118 +339,11 @@ const imagenes = [
 		
 	</section>
 
-	<section class="bg-black">
-		<h1 class="sr-only">Las mejores técnicas de SEO</h1>
-		<div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
-			<div class="mr-auto place-self-center lg:col-span-7">
-				<p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
-					En ocasiones los amarres pueden tener un resultado inmediato, a veces pueden transcurrir días, pero al final muestran todo su poder. En todo este tiempo nuestra cabeza debe estar enfocada en esa persona, porque quién algo quiere, algo le cuesta. Es indispensable la fe, la paciencia, las ganas y dejar que todo se ponga a nuestro favor para que consigamos nuestro objetivo. está la cosa muy malar.</p>
-				<a href="https://api.whatsapp.com/send/?phone=34613943413&text&type=phone_number&app_absent=0"
-					class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:text-rose-500 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
-					 Contactar
-					 <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-						 <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-					 </svg>
-				</a>	 
-				
-			</div>
-			<div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-				<img src={tarot_img2.src} alt="mockup">
-			</div>                
-		</div>
-		
-	</section>
-
-	<section class="bg-black">
-		<h1 class="sr-only">Las mejores técnicas de SEO</h1>
-		<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-		  <div class="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
-			<h2 class="text-2xl font-bold text-gray-300">Mas detalles</h2>
-	  
-			<div class="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
-				<div class="group relative">
-					<img 
-					  src={family_img.src} 
-					  alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug." 
-					  class="w-full rounded-lg bg-white object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-2/1 lg:aspect-square">
-					
-					<!-- El div del texto con visibilidad condicionada según el tamaño de pantalla -->
-					<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300 sm:opacity-0 sm:group-hover:opacity-100 sm:invisible group-hover:visible max-sm:opacity-100 max-sm:visible">
-					  <div class="bg-black bg-opacity-50 p-6 rounded-lg">
-						<div class="text-center text-white">
-						  <h3 class="text-sm">
-							<a href="#">
-							  <span class="absolute inset-0"></span>
-							  Regreso del ser amado
-							</a>
-						  </h3>
-						  <p class="text-base font-semibold">
-							Uso las diferentes técnicas y rituales espirituales con magia blanca para retirar conjuros de mala suerte, envidias y alejo todo obstáculo que le impida obtener el bienestar y felicidad que tanto desea para su vida. No importa la distancia, realizo el mejor trabajo para romper cualquier hechicería que le hayan hecho a través de nuestras técnicas de magia blanca y hechizos de protección.
-						  </p>
-						</div>
-					  </div>
-					</div>
-				</div>
-				  
-				  
-				  
-				<div class="group relative">
-					
-					<img src={hands_img.src} alt="Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant." class="w-full rounded-lg bg-white object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-2/1 lg:aspect-square">
-				  
-					
-					<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300 sm:opacity-0 sm:group-hover:opacity-100 sm:invisible group-hover:visible max-sm:opacity-100 max-sm:visible">
-					  
-					  <div class="bg-black bg-opacity-50 p-6 rounded-lg">
-						<div class="text-center text-white">
-						  <h3 class="text-sm">
-							<a href="#">
-							  <span class="absolute inset-0"></span>
-							  Amarre Sexual
-							</a>
-						  </h3>
-						  <p class="text-base font-semibold">
-							Cuando se encuentra a esa persona que logra llenarnos el corazón de felicidad, entendemos que una buena intimidad es fundamental para que el amor permanezca y perdura por siempre. Acuda a nosotros para que pueda disfrutar al máximo las posibilidades físicas que el cuerpo brinda a través de nuestros amarres sexuales y hechizos de pareja. Permita que la conexión con esa persona alcance la cima del placer gracias a nuestros hechizos sexuales realizados especialmente por nuestros expertos.
-						  </p>
-						</div>
-					  </div>
-					</div>
-				</div>  
-
-				<div class="group relative">
-					
-					<img src={pasion_img.src} alt="Collection of four insulated travel bottles on wooden shelf." class="w-full rounded-lg bg-white object-cover group-hover:opacity-75 max-sm:h-80 sm:aspect-2/1 lg:aspect-square">
-				  
-					
-					<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-70 transition-opacity duration-300 sm:opacity-0 sm:group-hover:opacity-100 sm:invisible group-hover:visible max-sm:opacity-100 max-sm:visible">
-					  
-					  <div class="bg-black bg-opacity-50 p-6 rounded-lg">
-						<div class="text-center text-white">
-						  <h3 class="text-sm">
-							<a href="#">
-							  <span class="absolute inset-0"></span>
-							  Familia y Salud
-							</a>
-						  </h3>
-						  <p class="text-base font-semibold">
-							Un equilibrio entre cuerpo y mente es fundamental para que pueda sentir la plenitud de la vida, pues cuando se logra esa estabilidad cualquier meta que se proponga estará a su alcance sin mayor dificultad. Por eso, cuando acuda a nosotros será cuestión de tiempo para que recupere esa salud que se le ha ido, y para que pueda encaminarse y empezar a trabajar por aquello que tanto ha soñado.
-						  </p>
-						</div>
-					  </div>
-					</div>
-				</div>
-				  
-			</div>
-		  </div>
-		</div>
-		
-	</section>
-	  
 	<section id="sec-contact" class="relative isolate overflow-hidden py-24 sm:py-32">
 		<h1 class="sr-only">Las mejores técnicas de SEO</h1>
 		<div class="absolute inset-0 bg-gray-900/75 -z-10"></div>
 		
-		<img src={vela_img.src} alt="" class="absolute inset-0 -z-20 size-full object-cover object-right md:object-center">
+		<img src={fondo_horizontal.src} alt="" class="absolute inset-0 -z-20 size-full object-cover object-right md:object-center">
 		
 		<div class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl" aria-hidden="true">
 		  <div class="aspect-1097/845 w-[68.5625rem] bg-linear-to-tr from-[#ff4694] to-[#776fff] opacity-20" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
@@ -598,88 +355,190 @@ const imagenes = [
 	  
 		<div class="mx-auto max-w-7xl px-6 lg:px-8">
 		  <div class="mx-auto max-w-2xl lg:mx-0">
-			<h2 class="text-5xl font-semibold tracking-tight text-rose-500 sm:text-7xl">Contactenos</h2>
+			<h2 class="text-5xl font-semibold tracking-tight text-teal-800 sm:text-7xl">Pendientes</h2>
 		  </div>
 		</div>
 		
 	</section>
-	  
+
 	<section class="bg-black">
-		<h1 class="sr-only">Las mejores técnicas de SEO</h1>
-		<div class="grid max-w-screen-xl px-4 py-4 mx-auto lg:gap-6 xl:gap-0 lg:py-8 lg:grid-cols-12">
-		  <div class="mr-auto place-self-center lg:col-span-7">
-			<h2 class="max-w-2xl mb-4 font-light text-gray-500 lg:mb-6 md:text-md lg:text-lg dark:text-rose-500">
-			  Recupere su ser amado, Sane su ser
-			</h2>
-			<p class="max-w-2xl mb-4 font-light text-gray-500 lg:mb-6 md:text-md lg:text-lg dark:text-gray-400">
-			  No espere mas, consulte ahora y recupere a las personas que ama y que quiere que esten con usted.
-			</p>
-			<a href="https://api.whatsapp.com/send/?phone=34613943413&text&type=phone_number&app_absent=0" 
-			  class="inline-flex items-center justify-center px-4 py-2 mr-3 text-sm font-medium text-center text-white rounded-lg bg-primary-700 hover:text-rose-500 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
-			  whatsapp
-			  <svg class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-				<path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-			  </svg>
-			</a>
-		  </div>
-		  <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-			<img src={pedestal_img.src} alt="mockup" class="max-w-full h-48 object-cover" />
-		  </div>
-		</div>
-		
-	</section>
-	  
-	<section class="bg-black">
-		<h1 class="sr-only">Las mejores técnicas de SEO</h1>
-		<div class="grid max-w-screen-xl px-4 py-4 mx-auto lg:gap-6 xl:gap-0 lg:py-8 lg:grid-cols-12">
+		<div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
 		  
-		  <div class="lg:col-span-5 lg:flex justify-start">
-			<img src={amarre_img.src} alt="mockup" class="max-w-full h-48 object-cover" />
-		  </div>
 	  
-		  <div class="mr-auto place-self-center lg:col-span-7 lg:ml-4">
-			<h2 class="max-w-2xl mb-4 font-light text-gray-500 lg:mb-6 md:text-md lg:text-lg dark:text-rose-500">
-			  Amarres
+		  	<ul class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4" id="product-list">
+
+				
+		  	</ul>
+	  
+		  <ol class="mt-8 flex justify-center gap-1 text-xs font-medium">
+			<li>
+			  <a
+				href="#"
+				class="inline-flex size-8 items-center justify-center rounded-sm border border-gray-100 text-white"
+			  >
+				<span class="sr-only">Prev Page</span>
+				<svg
+				  xmlns="http://www.w3.org/2000/svg"
+				  class="size-3"
+				  viewBox="0 0 20 20"
+				  fill="currentColor"
+				>
+				  <path
+					fill-rule="evenodd"
+					d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+					clip-rule="evenodd"
+				  />
+				</svg>
+			  </a>
+			</li>
+	  
+			<li>
+				<a href="#" class="boton-cambiar block size-8 rounded-sm border border-gray-100 text-center leading-8 text-white">
+					1	</a>
+			</li>
+	  
+			<li>
+				<a href="#" class="boton-cambiar block size-8 rounded-sm border border-gray-100 text-center leading-8 text-white">
+					2	</a>
+			</li>
+	  
+			<li>
+				<a href="#" class="boton-cambiar block size-8 rounded-sm border border-gray-100 text-center leading-8 text-white">
+					3	</a>
+			</li>
+	  
+			<li>
+				<a href="#" class="boton-cambiar block size-8 rounded-sm border border-gray-100 text-center leading-8 text-white">
+					4	</a>
+			</li>
+	  
+			<li>
+			  <a
+				href="#"
+				class="inline-flex size-8 items-center justify-center rounded-sm border border-gray-100 text-white"
+			  >
+				<span class="sr-only">Next Page</span>
+				<svg
+				  xmlns="http://www.w3.org/2000/svg"
+				  class="size-3"
+				  viewBox="0 0 20 20"
+				  fill="currentColor"
+				>
+				  <path
+					fill-rule="evenodd"
+					d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+					clip-rule="evenodd"
+				  />
+				</svg>
+			  </a>
+			</li>
+		  </ol>
+		</div>
+	</section>
+
+	<footer class="bg-black dark:bg-gray-900">
+		<div class="mx-auto max-w-screen-xl px-4 pt-16 pb-8 sm:px-6 lg:px-8 lg:pt-24">
+		  <div class="text-center">
+			<h2 class="text-3xl font-extrabold text-gray-900 sm:text-5xl dark:text-white">
+				Compra los tuyos ahora
 			</h2>
-			<p class="max-w-2xl mb-4 font-light text-gray-500 lg:mb-6 md:text-md lg:text-lg dark:text-gray-400">
-			  En ocasiones los amarres pueden tener un resultado inmediato, a veces pueden transcurrir días, pero al final muestran todo su poder. En todo este tiempo nuestra cabeza debe estar enfocada en esa persona, porque quién algo quiere, algo le cuesta. Es indispensable la fe, la paciencia, las ganas y dejar que todo se ponga a nuestro favor para que consigamos nuestro objetivo.
+	  
+			<p class="mx-auto mt-4 max-w-sm text-gray-500 dark:text-gray-400">
+				No dejes pasar la oportunidad de sumergirte en un mundo lleno de diseños únicos. 
+  				Descubre lo que tenemos para ofrecerte y sorprende a las personas que más quieres.
 			</p>
-			<a href="https://api.whatsapp.com/send/?phone=34613943413&text&type=phone_number&app_absent=0" 
-			  class="inline-flex items-center justify-center px-4 py-2 mr-3 text-sm font-medium text-center text-white rounded-lg bg-primary-700 hover:text-rose-500 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
-			  whatsapp
-			  <svg class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-				<path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-			  </svg>
+	  
+			<a
+			  href="#"
+			  class="mt-8 inline-block rounded-full border border-teal-800 px-12 py-3 text-sm font-medium text-white hover:bg-teal-800 hover:text-white focus:ring-3 focus:outline-hidden"
+			>
+			  Vamos...
 			</a>
 		  </div>
-		</div>
-		
-	</section>
 	  
-	<section class="bg-black">
-		<h1 class="sr-only">Las mejores técnicas de SEO</h1>
-		<div class="grid max-w-screen-xl px-4 py-4 mx-auto lg:gap-6 xl:gap-0 lg:py-8 lg:grid-cols-12">
-		  <div class="mr-auto place-self-center lg:col-span-7">
-			<h2 class="max-w-2xl mb-4 font-light text-gray-500 lg:mb-6 md:text-md lg:text-lg dark:text-rose-500">
-			  Alejamientos
-			</h2>
-			<p class="max-w-2xl mb-4 font-light text-gray-500 lg:mb-6 md:text-md lg:text-lg dark:text-gray-400">
-			  Evita las malas energías y supérate, tendrás la capacidad de ver más allá y eliminar de tu vida a todas las personas y hechizos que sobre ti han puesto.
-			</p>
-			<a href="https://api.whatsapp.com/send/?phone=34613943413&text&type=phone_number&app_absent=0" 
-			  class="inline-flex items-center justify-center px-4 py-2 mr-3 text-sm font-medium text-center text-white rounded-lg bg-primary-700 hover:text-rose-500 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
-			  whatsapp
-			  <svg class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-				<path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-			  </svg>
-			</a>
-		  </div>
-		  <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-			<img src={pedestal_img2.src} alt="mockup" class="max-w-full h-48 object-cover" />
+		  <div
+			class="mt-16 border-t border-gray-100 pt-8 sm:flex sm:items-center sm:justify-between lg:mt-24 dark:border-gray-800"
+		  >
+			<ul class="flex flex-wrap justify-center gap-4 text-xs lg:justify-end">
+			  <li>
+				<a href="#" class="text-gray-500 transition hover:opacity-75 dark:text-gray-400">
+				  Terms & Conditions
+				</a>
+			  </li>
+	  
+			  <li>
+				<a href="#" class="text-gray-500 transition hover:opacity-75 dark:text-gray-400">
+				  Privacy Policy
+				</a>
+			  </li>
+	  
+			  <li>
+				<a href="#" class="text-gray-500 transition hover:opacity-75 dark:text-gray-400">
+				  Cookies
+				</a>
+			  </li>
+			</ul>
+	  
+			<ul class="mt-8 flex justify-center gap-6 sm:mt-0 lg:justify-end">
+			  <li>
+				<a
+				  href="#"
+				  rel="noreferrer"
+				  target="_blank"
+				  class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+				>
+				  <span class="sr-only">Facebook</span>
+	  
+				  <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+					<path
+					  fill-rule="evenodd"
+					  d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+					  clip-rule="evenodd"
+					/>
+				  </svg>
+				</a>
+			  </li>
+	  
+			  <li>
+				<a
+				  href="#"
+				  rel="noreferrer"
+				  target="_blank"
+				  class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+				>
+				  <span class="sr-only">Instagram</span>
+	  
+				  <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+					<path
+					  fill-rule="evenodd"
+					  d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+					  clip-rule="evenodd"
+					/>
+				  </svg>
+				</a>
+			  </li>
+	  
+			  <li>
+				<a
+				  href="#"
+				  rel="noreferrer"
+				  target="_blank"
+				  class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+				>
+				  <span class="sr-only">Twitter</span>
+	  
+				  <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+					<path
+					  d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
+					/>
+				  </svg>
+				</a>
+			  </li>
+	  
+			</ul>
 		  </div>
 		</div>
-		
-	</section>
+	</footer>	
 
 </Start>
 
@@ -724,3 +583,100 @@ const imagenes = [
 	  dropdownMenu.classList.toggle('hidden');
 	});
 </script>
+
+<script define:vars={{imagenes_front,productos_screen}}>
+	let productos_constante = productos_screen;
+	let productos = productos_screen;
+
+	document.addEventListener('DOMContentLoaded', function () {
+      const botones = document.querySelectorAll('.boton-cambiar');
+
+      botones.forEach(boton => {
+        boton.addEventListener('click', (e) => {
+          e.preventDefault(); 
+
+          botones.forEach(b => {
+            b.classList.remove('border-gray-400', 'bg-gray-400', 'text-white');  
+            b.classList.add('border-gray-100', 'bg-black', 'text-white'); 
+          });
+
+		  const textoBoton = boton.textContent.trim(); 
+		  productos = textoBoton * productos_constante;
+		  console.log('valor',textoBoton*productos_constante);
+          // Cambiar el estilo del botón clickeado
+          boton.classList.add('border-gray-400'); 
+          boton.classList.add('bg-gray-400');      
+          boton.classList.add('text-white');       
+
+		  crear_elementos();
+        });
+      });
+    });
+
+	function createProductElement(imagenSrc) {
+
+	  const li = document.createElement('li');
+  
+	  const a = document.createElement('a');
+	  a.href = '#';
+	  a.classList.add('group', 'block', 'overflow-hidden');
+  
+	  const img = document.createElement('img');
+	  img.src = imagenSrc;
+	  img.alt = '';
+	  img.classList.add('h-[350px]', 'w-full', 'object-cover', 'transition', 'duration-500', 'group-hover:scale-105', 'sm:h-[450px]');
+  
+	  const div = document.createElement('div');
+	  div.classList.add('relative', 'bg-white', 'pt-3');
+  
+	  const h3 = document.createElement('h3');
+	  h3.classList.add('text-xs', 'text-gray-400', 'group-hover:underline', 'group-hover:underline-offset-4');
+	  h3.textContent = 'Basic Tee';
+  
+	  const p = document.createElement('p');
+	  p.classList.add('mt-2');
+  
+	  const srOnly = document.createElement('span');
+	  srOnly.classList.add('sr-only');
+	  srOnly.textContent = ' Regular Price ';
+	  
+	  const price = document.createElement('span');
+	  price.classList.add('tracking-wider', 'text-gray-400');
+	  price.textContent = '£24.00 GBP';
+  
+	  p.appendChild(srOnly);
+	  p.appendChild(price);
+	  div.appendChild(h3);
+	  div.appendChild(p);
+	  a.appendChild(img);
+	  a.appendChild(div);
+  
+	  li.appendChild(a);
+  
+	  return li;
+	}
+	function crear_elementos(){
+		let contador = 0;
+		let tope = productos - 4;
+		const productList = document.getElementById('product-list');
+		productList.innerHTML = '';
+		imagenes_front.forEach((imagenSrc) => {
+
+			if (contador < productos && contador >= tope){
+				
+				
+				const productElement = createProductElement(imagenSrc);
+				productList.appendChild(productElement);
+				console.log("tope : ",tope);
+			}
+			contador++;
+		});
+	}
+	// Función para cargar los productos al cargar la página
+	window.onload = function() {
+		
+		crear_elementos();
+		
+	}
+
+  </script>
